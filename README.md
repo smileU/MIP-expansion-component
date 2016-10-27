@@ -1,5 +1,5 @@
 # do-better
-MIP-扩展组件-畅言
+MIP - Expansion component - changyan
 define("mip-changyan", ["require", "zepto", "customElement"], function(t) {
 	function n() {
 		var e = this.element;
