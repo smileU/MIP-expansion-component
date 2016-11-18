@@ -7,7 +7,7 @@ define("mip-changyan", ["require", "zepto", "customElement"], function(t) {
 			conf = e.getAttribute("conf"),
 			a = i(e),
 			h = ['<script type="text/javascript">',
-			'var _hmt = _hmt || []; (function() {var hm = document.createElement("script"); hm.src = "//changyan.sohu.com/upload/changyan.js?appid='
+			'var _hmt = _hmt || []; (function() {var hm = document.createElement("script"); hm.id = "changyan_mobile_js"; hm.charset = "utf-8"; hm.src = "//changyan.sohu.com/upload/changyan.js?appid='
 			+ appid + '&conf=' + conf + '";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();',
 			"</script>"];	
 			a.append(h.join(""))
