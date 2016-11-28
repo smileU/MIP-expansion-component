@@ -1,4 +1,4 @@
-define("mip-changyan-res", ["require", "zepto", "customElement"], function(t) {
+define("mip-changyan", ["require", "zepto", "customElement"], function(t) {
 	function n() {
 		var e = this.element;
 		if(!e.isRender) {
@@ -42,6 +42,6 @@ define("mip-changyan-res", ["require", "zepto", "customElement"], function(t) {
 		this.createdCallback = n
 	},s 
 });
-require(["mip-changyan-res"], function(t) {
-    MIP.registerMipElement("mip-changyan-res", t);   
+require(["mip-changyan"], function(t) {
+    MIP.registerMipElement("mip-changyan", t);   
 });
