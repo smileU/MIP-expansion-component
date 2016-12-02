@@ -1,11 +1,13 @@
 define("mip-changyan", ["require", "zepto", "customElement"], function(t) {
 	function n() {
-		var e = this.element;
-		var appid = e.getAttribute("appid"),
-		conf = e.getAttribute("conf"),
-		a = i(e);
-		var width = window.innerWidth || document.documentElement.clientWidth; 
-		if (width < 960) {
+		var ele = this.element;
+       var appid = ele.getAttribute('appid');
+        var conf = ele.getAttribute('conf');
+        var criWidth = ele.getAttribute('critical-width');
+        var viewport = require('viewport');
+        var width = viewport.getWidth();
+        
+        if (criWidth != null && width < criWidth) {
             window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
         }
         else {
@@ -48,3 +50,4 @@ define("mip-changyan", ["require", "zepto", "customElement"], function(t) {
 require(["mip-changyan"], function(t) {
     MIP.registerMipElement("mip-changyan", t);   
 });
+
